@@ -1,7 +1,7 @@
 package main
 
 import (
-	"log"
+	
 	"os"
 	"player-leaderboard-backend/cache"
 	"player-leaderboard-backend/db"
@@ -14,10 +14,8 @@ import (
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
+	 godotenv.Load()
+	
 	allowedOrigin := os.Getenv("API_URL")
 
 	db.Connect()
