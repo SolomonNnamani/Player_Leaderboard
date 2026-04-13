@@ -188,7 +188,7 @@ export default function Leaderboard() {
                             name: e.target.value,
                           }))
                         }
-                        className=" rounded-xl w-15 md:w-20 text-center p-1 bg-black outline-none"
+                        className=" rounded-xl w-20 text-center p-1 bg-black outline-none"
                       />
                       {error.name && (
                         <p className="text-red-500 text-[10px] mx-1">
