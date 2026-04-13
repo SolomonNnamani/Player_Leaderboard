@@ -36,7 +36,7 @@ export default function Leaderboard() {
           setLeaderboard(data.players);
         }
       } catch (err) {
-        toast.error("FAILED TO FETCH PLAYER'S INFORMATION");
+        toast.error("Failed to fetch players information.");
       } finally {
         setLoading(false);
       }
@@ -154,7 +154,7 @@ export default function Leaderboard() {
       </div>
 
       {/**Fetch,edit and delete */}
-      <div className="mx-3 lg:max-h-[70vh] lg:overflow-y-auto pr-2 hide-scrollbar">
+      <div className=" lg:max-h-[70vh] lg:overflow-y-auto pr-2 hide-scrollbar">
         {loading ? (
           <div className="flex justify-center items-center h-40">
             <div className="w-8 h-8 border-4 border-gray-300 border-t-black rounded-full animate-spin"></div>
@@ -188,7 +188,7 @@ export default function Leaderboard() {
                             name: e.target.value,
                           }))
                         }
-                        className=" rounded-xl w-20 text-center p-1 bg-black outline-none"
+                        className=" rounded-xl w-15 md:w-20 text-center p-1 bg-black outline-none"
                       />
                       {error.name && (
                         <p className="text-red-500 text-[10px] mx-1">
@@ -214,7 +214,7 @@ export default function Leaderboard() {
                             score: e.target.value,
                           }))
                         }
-                        className="rounded-xl w-20 text-center p-1 bg-black outline-none"
+                        className="rounded-xl w-10 md:w-20 text-center p-1 bg-black outline-none"
                       />
                       {error.score && (
                         <p className="text-red-500 text-[10px] mx-1">

@@ -56,7 +56,7 @@ export default function Snapshot() {
     },
   ];
   return (
-    <div className="mx-4 md:mx-12 mt-15">
+    <div className="mx-4 md:mx-12 mt-10 md:mt-15">
       {/**Snapshots */}
       <div className="flex flex-col md:flex-row gap-3 ">
         {snapshot.map((s, i) => (
