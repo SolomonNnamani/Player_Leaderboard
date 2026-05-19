@@ -9,7 +9,7 @@ export default function Home() {
       <Nav />
       <Snapshot />
       <div className="lg:flex lg:gap-5   lg:px-12  lg:w-full ">
-        <Input />
+        <Input/>
         <Leaderboard />
       </div>
     </div>
