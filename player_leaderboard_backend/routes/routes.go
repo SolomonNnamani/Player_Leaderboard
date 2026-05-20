@@ -12,4 +12,5 @@ func SetupRoutes(r *gin.Engine) {
 	r.PATCH("/players/:id", handlers.UpdateScore)
 	r.DELETE("/players/:id", handlers.DeletePlayer)
 	r.GET("/players/stats", handlers.GetStats)
+	 r.GET("/health", handlers.HealthCheck)
 }

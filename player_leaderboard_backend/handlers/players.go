@@ -189,3 +189,15 @@ func GetStats(c *gin.Context)     {
 
 
 }
+
+
+//for keeping supabase db active
+func HealthCheck(c *gin.Context) {
+    ctx := context.Background()
+    _, err := db.Pool.Exec(ctx, "SELECT 1")
+    if err != nil {
+        c.JSON(http.StatusInternalServerError, gin.H{"status": "db down"})
+        return
+    }
+    c.JSON(http.StatusOK, gin.H{"status": "ok"})
+}
